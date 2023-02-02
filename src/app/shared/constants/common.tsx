@@ -10,7 +10,7 @@ export const CURRENCIES = [
         decimals: 8,
         fee_decimals: 6,
         validator_dec: 6,
-        cid: '99c1e7d6168d71a0181ad2c8d75a1e37d671a75b4f2bd82907645f52baf7cecf'
+        cid: '5efe87e2d86db7a0bb8596e7cdb27664e1ef8a1154d6271208aa621d12aca215'
     },
     {
         name:'bETH', 
@@ -19,7 +19,7 @@ export const CURRENCIES = [
         decimals: 8,
         fee_decimals: 8,
         validator_dec: 8,
-        cid: '2ce5d66babf25f1a1908df54b8d7ca6a14f7f9432e78ef94ac97293170924dec'
+        cid: '1dfc6c7398dbec6076bad7472c7dfe363822b9142441ed935da22931de966ff1'
     },
     {
         name:'bDAI',
@@ -28,7 +28,7 @@ export const CURRENCIES = [
         decimals: 8,
         fee_decimals: 8,
         validator_dec: 8,
-        cid: '3e90f6dce9518738fdd818e02477cc41d43093ee1ce5c16ecfd61ca24153c423'
+        cid: '8d3742b569093861b059b85f6efb43a2239a235e73728dfba2b140e36d913a3c'
     },
     {
         name:'bWBTC',
@@ -37,6 +37,6 @@ export const CURRENCIES = [
         decimals: 8,
         fee_decimals: 8,
         validator_dec: 6,
-        cid: 'a21d770ab51a61fe6913e567022e71745e7dbfd2fdc87e43123784065d218a98'
+        cid: 'a60d416396774bd6ccbb24cf9e5d3d1cb61961c59e2ebd9f5b8ee1070550a2af'
     },
 ];
