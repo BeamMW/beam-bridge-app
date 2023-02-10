@@ -121,6 +121,7 @@ export function* loadRate() {
     setTimeout(() => store.dispatch(actions.loadRate.request()), FETCH_INTERVAL);
   } catch (e) {
     yield put(actions.loadRate.failure(e));
+    setTimeout(() => store.dispatch(actions.loadRate.request()), FETCH_INTERVAL);
   }
 }
 

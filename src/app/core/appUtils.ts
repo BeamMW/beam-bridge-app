@@ -32,11 +32,11 @@ export function truncate(value: string): string {
 }
 
 export function toUSD(amount: number, rate: number): string {
+  const value = amount * rate;
   switch (true) {
     case amount === 0 || Number.isNaN(amount):
       return '0 USD';
-    case amount > 0.011: {
-      const value = amount * rate;
+    case value > 0.011: {
       return `${value.toFixed(2)} USD`;
     }
     default:
@@ -125,6 +125,6 @@ export async function calcRelayerFee (ethRate, currRate, gasPrice) {
     gasValue = Number(FastGasPrice);
   }
   const relayCosts = RELAY_COSTS_IN_GAS * gasValue * ethRate / Math.pow(10, 9);
-  const RELAY_SAFETY_COEFF = 2;//1.1;
+  const RELAY_SAFETY_COEFF = 1.5;
   return RELAY_SAFETY_COEFF * relayCosts / currRate;
 }

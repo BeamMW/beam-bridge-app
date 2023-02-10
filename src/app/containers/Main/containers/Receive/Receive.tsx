@@ -150,7 +150,7 @@ const Selector: React.FC<SelectorProps> = ({onCurrChange, onPkChanged, className
   return (<StyledDropdown className={className}>
     <DropdownElem onClick={toggleDropdown}>
       {ICONS[selectedCurrency.name]()}
-      <span className={CurrencyClass}>{selectedCurrency.name}</span>
+      <span className={CurrencyClass}>{selectedCurrency.name + ' (id:'+selectedCurrency.aid+')'}</span>
       <Triangle></Triangle>
     </DropdownElem>
     {
@@ -160,7 +160,7 @@ const Selector: React.FC<SelectorProps> = ({onCurrChange, onPkChanged, className
           {items.map(item => (
             <DropdownElemOption key={item.id} onClick={e => handleItemClick(item)}>
               {ICONS[item.name]()}
-              <span className={CurrencyClass}>{item.name}</span>
+              <span className={CurrencyClass}>{item.name + ' (id:'+item.aid+')'}</span>
             </DropdownElemOption>
           ))}
         </DropdownBody>
@@ -397,7 +397,7 @@ const Receive = () => {
   const navigate = useNavigate();
 
   const getFullLink = () => {
-    return selectedCurrency ? 'https://bridges-dappnet.web.app/send/' + (selectedCurrency.name.toLowerCase() + pKey) : '';
+    return selectedCurrency ? 'https://eth-bridge.beam.mw/send/' + (selectedCurrency.name.toLowerCase() + pKey) : '';
   }
 
   const pkChanged = (pk) => {
@@ -450,8 +450,8 @@ const Receive = () => {
               - Copy and open <span className={pTitle}>Ethereum side of the brige </span> 
               manually in your web browser
             </ContainerLine>
-            <CopyArea onCopy={()=> 'https://bridges-dappnet.web.app/send/'}>
-              {'https://bridges-dappnet.web.app/send/'}
+            <CopyArea onCopy={()=> 'https://eth-bridge.beam.mw/send/'}>
+              {'https://eth-bridge.beam.mw/send/'}
             </CopyArea>
             <ContainerLine className='sub-link'>
               - Select <span className={pTitle}>Ethereum to BEAM </span>

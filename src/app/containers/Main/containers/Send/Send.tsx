@@ -307,7 +307,7 @@ const Send = () => {
             <ContainerLine>
               <Number>1.</Number>
               <Text>
-              <a href="https://bridges-dappnet.web.app" className={LinkClass} target="_blank"> 
+              <a href="https://eth-bridge.beam.mw" className={LinkClass} target="_blank"> 
                 Ethereum side of the bridge
               </a> in your web browser</Text>
             </ContainerLine>

@@ -41,7 +41,7 @@ const InputStyled = styled.input<InputProps>`
   font-size: ${({ variant }) => `${variant === 'common' ? '16px' : '36px'}`};
   color: ${({ variant, valid }) => `${variant === 'common' ? (valid ? 'white' : 'var(--color-red)') : '#da68f5'}`};
   background-color: transparent;
-  width: ${({ variant }) => `${variant === 'common' ? '100%' : '90%'}`};
+  width: ${({ variant }) => `${variant === 'common' ? '100%' : '60%'}`};
   height: 100%;
   -moz-appearance:textfield;
 
@@ -167,14 +167,14 @@ const Selector = (data: {type: string, onCurrChange: (next)=>void}) => {
     <StyledDropdown>
       <DropdownElem onClick={toggleDropdown}>
         {ICONS[selectedItem.name]()}
-        <span className={CurrencyClass}>{selectedItem.name}</span>
+        <span className={CurrencyClass}>{selectedItem.name + ' (id:'+selectedItem.aid+')'}</span>
         <Triangle></Triangle>
       </DropdownElem>
       <DropdownBody isVisible={isOpen} className={`dropdown-body ${isOpen && 'open'}`}>
         {items.map(item => (
           <DropdownElemOption key={item.id} onClick={e => handleItemClick(item)}>
             {ICONS[item.name]()}
-            <span className={CurrencyClass}>{item.name}</span>
+            <span className={CurrencyClass}>{item.name + ' (id:'+item.aid+')'}</span>
           </DropdownElemOption>
         ))}
       </DropdownBody>
