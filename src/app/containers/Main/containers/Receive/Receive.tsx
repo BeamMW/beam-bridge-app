@@ -447,7 +447,7 @@ const Receive = () => {
           { isExpanded ? 
           <ExpandedContent>
             <ContainerLine>
-              - Copy and open <span className={pTitle}>Ethereum side of the brige </span> 
+              - Copy and open <span className={pTitle}>Ethereum side of the bridge </span> 
               manually in your web browser
             </ContainerLine>
             <CopyArea onCopy={()=> 'https://eth-bridge.beam.mw/send/'}>
@@ -465,47 +465,6 @@ const Receive = () => {
               </CopyArea>
             }
           </ExpandedContent> : <></>}
-          {/* <div> */}
-            {/* <ContainerLine>
-              In order to transfer from Ethereum to Beam network, do <span className={BoldClass}>ONE</span> of the following:
-            </ContainerLine>
-            <ContainerLine className={IndentClass}>
-              1. <span className={pTitle}> Automatic way (recommended) </span>
-            </ContainerLine>
-            <ContainerLine>
-              Click to open 
-              <a href={getFullLink()} className={LinkClass} target="_blank"> 
-                Ethereum side of the bridge
-              </a> in your web browser 
-              (your Beam bridge address will be pasted automatically)
-            </ContainerLine>
-            <OrSeparator/>
-            <ContainerLine className={IndentClass}>
-              2. <span className={pTitle}> Manual way </span>
-            </ContainerLine>
-            <ContainerLine>
-              - Copy and open <span className={pTitle}>Ethereum side of the brige </span> 
-              manually in your web browser (your Beam bridge address will be pasted automatically)
-            </ContainerLine>
-            <CopyArea onCopy={()=> getFullLink()}> {getFullLink()} </CopyArea>
-            <OrSeparator/>
-            <ContainerLine className={IndentClass}>
-              2. <span className={pTitle}> Сompletely manual way </span>
-            </ContainerLine>
-            <ContainerLine>
-              - Copy and open <span className={pTitle}>Ethereum side of the brige </span> manually in your web browser
-            </ContainerLine>
-            <CopyArea onCopy={()=> 'https://bridges-dappnet.web.app/send/'}> {'https://bridges-dappnet.web.app/send/'} </CopyArea>
-            <ContainerLine className={SmallIndentClass}>
-              - Select <span className={pTitle}> Ethereum to Beam</span>
-            </ContainerLine>
-            <ContainerLine>
-              - Copy and paste this address to the Beam bridge address field
-            </ContainerLine>
-            {selectedCurrency &&
-            <CopyArea onCopy={()=> (selectedCurrency.name.toLowerCase() + pKey)}> {selectedCurrency.name.toLowerCase() + pKey} </CopyArea>
-            } */}
-          {/* </div> */}
         </Container>
         <Button variant="ghost" 
         onClick={cancelClicked} 
