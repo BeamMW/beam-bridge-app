@@ -108,9 +108,9 @@ export function* loadRate() {
     const gasPrice = yield call(loadGasPrice);
 
     for (let item in result) {
-      if (item === 'beam') {
-        continue;
-      }
+      // if (item === 'beam') {
+      //   continue;
+      // }
 
       const feeVal = yield call(loadRelayerFee, result['ethereum'].usd, result[item].usd, gasPrice);
       const curr = CURRENCIES.find((curr) => curr.rate_id === item)
