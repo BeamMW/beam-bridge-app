@@ -9,6 +9,7 @@ import { IconCancel,
   IconEth,
   IconUsdt,
   IconWbtc,
+  IconBeam,
   IconArrowManual,
   IconLink } from '@app/shared/icons';
 import { useEffect } from 'react';
@@ -141,6 +142,7 @@ const Selector: React.FC<SelectorProps> = ({onCurrChange, onPkChanged, className
   `;
   
   const ICONS = {
+    'BEAM': () => <IconBeam/>,
     'bUSDT': () => <IconUsdt/>,
     'bWBTC': () => <IconWbtc/>,
     'bDAI': () => <IconDai/>,

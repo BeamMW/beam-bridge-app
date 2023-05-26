@@ -9,7 +9,7 @@ export function LoadPublicKey<T = any>(payload, cid: string): Promise<T> {
     return new Promise((resolve, reject) => {
         Utils.invokeContract("role=user,action=get_pk,cid=" + cid, 
         (error, result, full) => {
-            resolve(result.pk);
+            resolve(result.pubkey);
         }, payload ? payload : null);
     });
 }

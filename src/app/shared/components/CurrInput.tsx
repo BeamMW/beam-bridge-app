@@ -2,7 +2,7 @@ import React, { useState, useRef, HTMLAttributes } from 'react';
 import { styled } from '@linaria/react';
 import { CURRENCIES } from '@app/shared/constants';
 import { css } from '@linaria/core';
-import { IconDai, IconEth, IconUsdt, IconWbtc } from '@app/shared/icons';
+import { IconDai, IconEth, IconUsdt, IconWbtc, IconBeam } from '@app/shared/icons';
 import { useEffect } from 'react';
 import { Rate } from './';
 
@@ -157,6 +157,7 @@ const Selector = (data: {type: string, onCurrChange: (next)=>void}) => {
   `;
     
   const ICONS = {
+    'BEAM': () => <IconBeam/>,
     'bUSDT': () => <IconUsdt/>,
     'bWBTC': () => <IconWbtc/>,
     'bDAI': () => <IconDai/>,
