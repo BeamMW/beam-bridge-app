@@ -102,19 +102,16 @@ export function* loadRate() {
     CURRENCIES.forEach((curr) => {
       rate_ids.push(curr.rate_id);
     });
-    rate_ids.push('beam');
+    rate_ids.push('ethereum');
     const result = yield call(loadRatesApiCall, rate_ids);
     let feeVals = {};
     const gasPrice = yield call(loadGasPrice);
 
-    for (let item in result) {
-      // if (item === 'beam') {
-      //   continue;
-      // }
+    console.log(result)
 
+    for (let item in result) {
       const feeVal = yield call(loadRelayerFee, result['ethereum'].usd, result[item].usd, gasPrice);
-      const curr = CURRENCIES.find((curr) => curr.rate_id === item)
-      feeVals[item] = feeVal.toFixed(curr.fee_decimals);
+      feeVals[item] = feeVal.toFixed(8);
     }
     yield put(actions.setFeeValues(feeVals));
     yield put(actions.loadRate.success(result));

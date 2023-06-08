@@ -10,15 +10,16 @@ export const CURRENCIES = [
         decimals: 8,
         fee_decimals: 8,
         validator_dec: 8,
-        cid: 'a6ff90a34b4a41dd4667de2c1c34569fc3d2d71254d1c422ffc23bbcc3d7737b'
-    },
-    {
-        name:'bETH', 
-        rate_id: 'ethereum',
-        id: 2,
-        decimals: 8,
-        fee_decimals: 8,
-        validator_dec: 8,
-        cid: 'a6ff90a34b4a41dd4667de2c1c34569fc3d2d71254d1c422ffc23bbcc3d7737b'
-    },
+        cid: '856ea14c87df7e67c9e9ead3b53a7724c088c12ae792080ee4c7459c0cc24981'
+    }
+    // ,
+    // {
+    //     name:'bETH', 
+    //     rate_id: 'ethereum',
+    //     id: 2,
+    //     decimals: 8,
+    //     fee_decimals: 8,
+    //     validator_dec: 8,
+    //     cid: '856ea14c87df7e67c9e9ead3b53a7724c088c12ae792080ee4c7459c0cc24981'
+    // },
 ];
