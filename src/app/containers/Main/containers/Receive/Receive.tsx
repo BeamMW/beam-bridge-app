@@ -399,7 +399,7 @@ const Receive = () => {
   const navigate = useNavigate();
 
   const getFullLink = () => {
-    return selectedCurrency ? 'https://bridges-dappnet.web.app/send/' + (selectedCurrency.name.toLowerCase() + pKey) : '';
+    return selectedCurrency ? 'https://dappnet-eth-to-beam.web.app/send/' + (selectedCurrency.name.toLowerCase() + pKey) : '';
   }
 
   const pkChanged = (pk) => {
@@ -452,8 +452,8 @@ const Receive = () => {
               - Copy and open <span className={pTitle}>Ethereum side of the brige </span> 
               manually in your web browser
             </ContainerLine>
-            <CopyArea onCopy={()=> 'https://bridges-dappnet.web.app/send/'}>
-              {'https://bridges-dappnet.web.app/send/'}
+            <CopyArea onCopy={()=> 'https://dappnet-eth-to-beam.web.app/send/'}>
+              {'https://dappnet-eth-to-beam.web.app/send/'}
             </CopyArea>
             <ContainerLine className='sub-link'>
               - Select <span className={pTitle}>Ethereum to BEAM </span>
